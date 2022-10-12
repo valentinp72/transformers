@@ -130,6 +130,7 @@ from . import (
     sew,
     sew_d,
     speech_encoder_decoder,
+    speech_encoder_multiple_decoders,
     speech_to_text,
     speech_to_text_2,
     splinter,

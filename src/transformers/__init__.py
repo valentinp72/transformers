@@ -319,6 +319,7 @@ _import_structure = {
     "models.sew": ["SEW_PRETRAINED_CONFIG_ARCHIVE_MAP", "SEWConfig"],
     "models.sew_d": ["SEW_D_PRETRAINED_CONFIG_ARCHIVE_MAP", "SEWDConfig"],
     "models.speech_encoder_decoder": ["SpeechEncoderDecoderConfig"],
+    "models.speech_encoder_multiple_decoders": ["SpeechEncoderMultipleDecodersConfig"],
     "models.speech_to_text": [
         "SPEECH_TO_TEXT_PRETRAINED_CONFIG_ARCHIVE_MAP",
         "Speech2TextConfig",
@@ -1853,6 +1854,7 @@ else:
         ]
     )
     _import_structure["models.speech_encoder_decoder"].extend(["SpeechEncoderDecoderModel"])
+    _import_structure["models.speech_encoder_multiple_decoders"].extend(["SpeechEncoderMultipleDecodersModel"])
     _import_structure["models.speech_to_text"].extend(
         [
             "SPEECH_TO_TEXT_PRETRAINED_MODEL_ARCHIVE_LIST",
@@ -3285,6 +3287,7 @@ if TYPE_CHECKING:
     from .models.sew import SEW_PRETRAINED_CONFIG_ARCHIVE_MAP, SEWConfig
     from .models.sew_d import SEW_D_PRETRAINED_CONFIG_ARCHIVE_MAP, SEWDConfig
     from .models.speech_encoder_decoder import SpeechEncoderDecoderConfig
+    from .models.speech_encoder_multiple_decoders import SpeechEncoderMultipleDecodersConfig
     from .models.speech_to_text import SPEECH_TO_TEXT_PRETRAINED_CONFIG_ARCHIVE_MAP, Speech2TextConfig
     from .models.speech_to_text_2 import (
         SPEECH_TO_TEXT_2_PRETRAINED_CONFIG_ARCHIVE_MAP,
@@ -4546,6 +4549,7 @@ if TYPE_CHECKING:
             SEWDPreTrainedModel,
         )
         from .models.speech_encoder_decoder import SpeechEncoderDecoderModel
+        from .models.speech_encoder_multiple_decoders import SpeechEncoderMultipleDecodersModel
         from .models.speech_to_text import (
             SPEECH_TO_TEXT_PRETRAINED_MODEL_ARCHIVE_LIST,
             Speech2TextForConditionalGeneration,
